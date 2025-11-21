@@ -1,0 +1,139 @@
+/* styles.scss - VERSÃO DEFINITIVA E TESTADA */
+
+/* ===== FONTES CAIXA ===== */
+@font-face {
+  font-family: 'CAIXA Std';
+  src: url('./assets/fonts/CAIXAStd-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'CAIXA Std';
+  src: url('./assets/fonts/CAIXAStd-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'CAIXA Std';
+  src: url('./assets/fonts/CAIXAStd-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ===== VARIÁVEIS ===== */
+:root {
+  --caixa-azul: #0047BB;
+  --caixa-azul-light: #E6EEFA;
+  --caixa-laranja: #FF6B00;
+  --caixa-laranja-light: #FFF0E6;
+  --caixa-white: #FFFFFF;
+  --caixa-grey: #E5E5E5;
+  --caixa-text: #333333;
+}
+
+/* ===== RESET COMPLETO ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'CAIXA Std', Arial, sans-serif !important;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'CAIXA Std', Arial, sans-serif !important;
+}
+
+body {
+  background-color: var(--caixa-white);
+  color: var(--caixa-text);
+  line-height: 1.6;
+  font-family: 'CAIXA Std', Arial, sans-serif !important;
+  font-weight: 400;
+}
+
+/* ===== FORÇAR EM TODOS OS ELEMENTOS ===== */
+h1, h2, h3, h4, h5, h6, p, span, div, button, a, input, textarea, select,
+label, li, ul, ol, table, td, th, tr, section, article, main, header, footer, nav, aside {
+  font-family: 'CAIXA Std', Arial, sans-serif !important;
+}
+
+/* ===== CLASSES TESTE ===== */
+.teste-fonte {
+  font-family: 'CAIXA Std', Arial, sans-serif !important;
+  border: 2px solid var(--caixa-azul);
+  padding: 20px;
+  margin: 20px;
+  background-color: var(--caixa-azul-light);
+}
+
+.teste-fonte h2 {
+  color: var(--caixa-azul);
+  font-weight: 600;
+}
+
+.teste-fonte .light {
+  font-weight: 300;
+}
+
+.teste-fonte .regular {
+  font-weight: 400;
+}
+
+.teste-fonte .semibold {
+  font-weight: 600;
+  color: var(--caixa-laranja);
+}
+
+/* ===== RESPONSIVIDADE GLOBAL ===== */
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1024px) {
+  html {
+    font-size: 15px;
+  }
+
+  body {
+    font-size: 0.95rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  html {
+    font-size: 14px;
+  }
+
+  body {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  /* Melhorar toque em mobile */
+  button, a, input, select, textarea {
+    min-height: 44px; /* Tamanho mínimo recomendado para toque */
+  }
+
+  /* Prevenir zoom em inputs no iOS */
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="number"],
+  input[type="tel"],
+  select,
+  textarea {
+    font-size: 16px; /* Previne zoom automático no iOS */
+  }
+}
+
+/* Melhorias para telas muito pequenas */
+@media (max-width: 480px) {
+  html {
+    font-size: 13px;
+  }
+}
+
