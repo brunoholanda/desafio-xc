@@ -49,6 +49,14 @@ import { AuthService } from '../services/auth.service';
               </svg>
               <span class="profile-text">Perfil</span>
             </button>
+            <button class="logout-button" (click)="logout()" aria-label="Sair">
+              <svg class="logout-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                <polyline points="16 17 21 12 16 7"></polyline>
+                <line x1="21" y1="12" x2="9" y2="12"></line>
+              </svg>
+              <span class="logout-text">Sair</span>
+            </button>
           </div>
         </div>
       </header>
@@ -223,7 +231,8 @@ import { AuthService } from '../services/auth.service';
     }
 
     .notification-button,
-    .profile-button {
+    .profile-button,
+    .logout-button {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -237,13 +246,15 @@ import { AuthService } from '../services/auth.service';
     }
 
     .notification-icon,
-    .profile-icon {
+    .profile-icon,
+    .logout-icon {
       width: 24px;
       height: 24px;
     }
 
     .notification-text,
-    .profile-text {
+    .profile-text,
+    .logout-text {
       font-size: 0.75rem;
       font-weight: 400;
     }
@@ -503,7 +514,8 @@ import { AuthService } from '../services/auth.service';
       }
 
       .notification-text,
-      .profile-text {
+      .profile-text,
+      .logout-text {
         display: none;
       }
 
